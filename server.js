@@ -218,11 +218,7 @@ app.get('/test', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`✅ Server is running on port ${PORT}`);
-    console.log(`🌐 http://localhost:${PORT}`);
-    console.log(`📱 Test endpoint: http://localhost:${PORT}/test`);
-    console.log(`💾 POST to: http://localhost:${PORT}/fetch-video`);
-    console.log(`\n⚠️  Note: Instagram blocks direct API calls.`);
-    console.log(`   This server uses third-party services that still work.`);
+const PORT = process.env.PORT || 3001; // Render will provide the PORT
+app.listen(PORT, '0.0.0.0', () => { // Listen on all network interfaces
+    console.log(`✅ Server running on port ${PORT}`);
 });
