@@ -1,7 +1,6 @@
 ﻿{
   "name": "insta-proxy-backend",
   "version": "1.0.0",
-  "description": "Instagram Video Downloader Backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
